@@ -18,7 +18,7 @@ const SHEET_PATH = process.env.SHEET_PATH || root('sheets')
 
 module.exports = {
   siteMetadata: {
-    title: 'Devhints',
+    title: 'Aituglo',
     sheetPath: SHEET_PATH,
     ...siteMetadata
   },

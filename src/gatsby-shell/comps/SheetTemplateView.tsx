@@ -3,7 +3,6 @@ import useSiteContent from '../../gatsby-hooks/useSiteContent'
 import { useSheetContext } from '../SheetTemplate'
 
 // Components
-import CommentsArea from '../../web-comments/CommentsArea'
 import PostContent from '../../web-post-content/PostContent'
 import IntroContent from '../../web/components/IntroContent'
 import MainHeading from '../../web/components/MainHeading'
@@ -73,7 +72,6 @@ export const SheetTemplateView = () => {
 
       {/* Comments area */}
       <PreFooter />
-      <CommentsArea />
 
       {/* Search & related posts footer */}
       <SearchFooter />

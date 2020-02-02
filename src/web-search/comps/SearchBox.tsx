@@ -7,10 +7,10 @@ import CSS from './SearchBox.module.css'
 const SearchBox = () => {
   return (
     <label className={cn(CSS.root, CSS.isSmall)}>
-      <span className={CSS.prefix}>devhints.io</span>
+      <span className={CSS.prefix}>aituglo</span>
       <span className={CSS.sep}>/</span>
 
-      <LiveSearchInput placeholder='Search 360+ cheatsheets' />
+      <LiveSearchInput placeholder='Search cheatsheets' />
 
       <i
         className={CSS.icon}

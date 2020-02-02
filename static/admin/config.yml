@@ -6,7 +6,6 @@ backend:
 # Location in the repo
 media_folder: static/images
 
-# Location in devhints.io/
 public_folder: /images
 
 collections:

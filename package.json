@@ -1,8 +1,8 @@
 {
-  "name": "devhints-engine",
-  "description": "Static site generator that builds devhints.io",
+  "name": "aitudoc",
+  "description": "Static site generator that builds doc.aituglo.com",
   "version": "0.1.0",
-  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
+  "author": "Rico Cruz <rico@ricostacruz.com>, Cassim Khouani <contact@aituglo.com>",
   "dependencies": {
     "@babel/register": "^7.6.2",
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.2.1",
@@ -87,10 +87,7 @@
     "typescript": "^3.6.4",
     "typescript-tslint-plugin": "^0.3.1"
   },
-  "keywords": [
-    "devhints"
-  ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "n/a",
   "private": true,
   "scripts": {
