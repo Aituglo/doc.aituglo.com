@@ -1,52 +1,63 @@
-default:
+npmbin := ./node_modules/.bin
+PORT ?= 3000
+HOST ?= 127.0.0.1
+
+help:
 	@echo
-	@echo "Makefile targets:"
-	@grep -E '^[a-zA-Z_-].*?: .*?## .*$$' Makefile | sed 's#\\:#:#g' | awk 'BEGIN {FS = ": .*?## "}; {printf "\033[36m  %-20s\033[0m %s\n", $$1, $$2}'
+	@echo Makefile targets
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 	@echo
 
-run ?= docker-compose run --rm web
+# Builds intermediate files. Needs a _site built first though
+update: _site critical
 
-yarn: ## Installs packages [alias: i]
-	$(run) yarn
+# Builds _site
+_site:
+	bundle exec jekyll build --incremental
 
-start: ## Starts the server [alias: s]
-	$(run) yarn start
+critical: _site ## Builds critical path CSS/JS
+	node _support/critical.js
 
-up: ## Starts the server as a daemon
-	docker-compose up -d
+# Ensure that bins are available.
+ensure-bin:
+	@if [ ! -d $(npmbin) ]; then \
+		echo "---"; \
+		echo "Error: $(npmbin) not found, you may need to run '[docker-compose run --rm web] yarn install'."; \
+		echo "---"; \
+		exit 1; \
+		fi
+	@if ! which jekyll &>/dev/null; then \
+		echo "---"; \
+		echo "Warning: Jekyll not found, you may need to run '[docker-compose run --rm web] bundle install'."; \
+		echo "---"; \
+		fi
 
-down: ## Stops the server
-	docker-compose down
+dev: ensure-bin ## Starts development server
+	$(npmbin)/concurrently -k -p command -c "blue,green" \
+		"make dev-webpack" \
+		"make dev-jekyll"
 
-bash: ## Runs a shell inside a Docker container [alias: sh]
-	$(run) bash
+dev-webpack: ensure-bin
+	$(npmbin)/webpack --watch --colors -p
 
-test: ## Jest tests
-	$(run) yarn test
+dev-jekyll: ensure-bin
+	if [ -f _site ]; then \
+		bundle exec jekyll serve --safe --trace --drafts --watch --incremental --host $(HOST) --port $(PORT); \
+		else \
+		bundle exec jekyll serve --safe --trace --drafts --watch --host $(HOST) --port $(PORT); \
+		fi
 
-tsc: ## Runs the TypeScript compiler
-	$(run) yarn tsc
+test: _site ## Runs rudimentary tests
+	@test -f _site/vim.html
+	@test -f _site/react.html
+	@test -f _site/index.html
+	@grep "<script src" _site/index.html >/dev/null
+	@grep "<script src" _site/vim.html >/dev/null
+	@grep "<script src" _site/react.html >/dev/null
 
-tsc\:watch: ## Runs the TypeScript compiler (watch mode) [alias: t]
-	$(run) yarn tsc --watch
-
-css_modules\:update: ## Update CSS modules [alias: c]
-	$(run) yarn css_modules:update
-
-lint: ## Run tslint
-	$(run) yarn lint
-
-fix: css_modules\:update ## Run tslint-fix and prettier-fix
-	$(run) yarn run tslint --project . --fix
-	$(run) yarn run prettier\:fix
-
-prettier\:check: ## Run prettier
-	$(run) yarn prettier\:check
-
-# Aliases
-i: yarn
-s: start
-sh: bash
-c: css_modules\:update
-ci: test tsc prettier\:check lint
-t: tsc\:watch
+test-warning:
+	@echo "========="
+	@echo "If your build failed at this point, it means"
+	@echo "the site failed to generate. Check the project"
+	@echo "out locally and try to find out why."
+	@echo "========="

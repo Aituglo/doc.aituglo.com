@@ -1,0 +1,13 @@
+{
+  "*.md": {
+    "type": "cheat",
+    "template": [
+      "---",
+      "title: {basename|capitalize}",
+      "category: Ruby",
+      "layout: main/sheet",
+      "updated: DATE",
+      "---"
+    ]
+  }
+}

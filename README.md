@@ -1,1 +1,0 @@
-# Aituglo's cheatsheet
