@@ -1,6 +1,7 @@
 ---
 title: Python
-category: Python
+layout: main/sheet
+category: Dev
 ---
 
 ### Lists

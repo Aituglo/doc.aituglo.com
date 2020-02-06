@@ -1,6 +1,6 @@
 ---
 title: Vue.js
-category: JavaScript
+category: Dev
 layout: main/sheet
 updated: 2019-12-26
 weight: -10

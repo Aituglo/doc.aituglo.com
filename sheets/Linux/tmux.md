@@ -1,5 +1,6 @@
 ---
 title: tmux
+layout: main/sheet
 category: Linux
 ---
 

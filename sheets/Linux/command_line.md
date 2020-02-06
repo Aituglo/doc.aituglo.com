@@ -1,10 +1,16 @@
 ---
 title: Command line stuff
+category: Linux
+layout: main/sheet
 ---
 
-## List (ls)
-
+List
+--------------------
+{: .-one-column}
     ls [options] [paths]
+
+{: .-three-column}
+
 
 ### Format
 

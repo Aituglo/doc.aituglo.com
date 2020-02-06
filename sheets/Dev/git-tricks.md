@@ -1,6 +1,7 @@
 ---
 title: Git tricks
-category: Git
+layout: main/sheet
+category: Dev
 ---
 
 ## Refs

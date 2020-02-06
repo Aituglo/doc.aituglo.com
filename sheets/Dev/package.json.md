@@ -1,6 +1,6 @@
 ---
 title: package.json
-category: Node.js
+category: Dev
 layout: main/sheet
 prism_languages: [json]
 updated: 2017-08-30
@@ -16,7 +16,7 @@ weight: -3
   "version": "0.1.0",
   "license": "MIT",
   "keywords": ["http", "server"],
-  "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
+  "author": "Cassim Khouani <contact@aituglo.com>",
   "engines": {
     "node": ">=0.8.0"
   },
@@ -26,7 +26,7 @@ weight: -3
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rstacruz/___.git"
+    "url": "https://github.com/Aituglo/___.git"
   },
 }
 ```

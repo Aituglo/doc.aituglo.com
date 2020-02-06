@@ -1,6 +1,6 @@
 ---
 title: npm
-category: JavaScript
+category: Dev
 layout: main/sheet
 weight: -1
 updated: 2017-10-27

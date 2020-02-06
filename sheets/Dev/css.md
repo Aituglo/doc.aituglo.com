@@ -1,6 +1,6 @@
 ---
 title: CSS
-category: CSS
+category: Dev
 layout: main/sheet
 weight: -1
 keywords:

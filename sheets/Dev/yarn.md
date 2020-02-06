@@ -1,6 +1,6 @@
 ---
 title: Yarn
-category: JavaScript libraries
+category: Dev
 layout: main/sheet
 weight: -3
 updated: 2017-09-08

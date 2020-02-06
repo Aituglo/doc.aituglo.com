@@ -1,6 +1,6 @@
 ---
 title: Git branches
-category: Git
+category: Dev
 layout: main/sheet
 updated: 2017-09-20
 ---

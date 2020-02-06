@@ -1,6 +1,6 @@
 ---
 title: React.js
-category: React
+category: Dev
 layout: main/sheet
 ads: true
 tags: [Featured]

@@ -1,6 +1,6 @@
 ---
 title: Webpack
-category: JavaScript libraries
+category: Dev
 layout: main/sheet
 updated: 2017-09-26
 intro: |

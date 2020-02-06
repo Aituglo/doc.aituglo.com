@@ -1,5 +1,5 @@
 ---
-title: regexp
+title: Regexp
 category: Others
 layout: main/sheet
 weight: -1

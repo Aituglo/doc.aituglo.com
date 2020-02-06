@@ -1,6 +1,6 @@
 ---
 title: Redux
-category: React
+category: Dev
 layout: main/sheet
 updated: 2018-01-17
 weight: -3

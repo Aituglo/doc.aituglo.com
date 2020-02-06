@@ -1,6 +1,6 @@
 ---
 title: Licenses
-section: Development
+category: Dev
 layout: main/sheet
 updated: 2017-08-26
 ---
@@ -12,7 +12,7 @@ updated: 2017-08-26
 ```
 The MIT License (MIT)
 
-Copyright (c) 2015 $NAME
+Copyright (c) 2020 $NAME
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +36,7 @@ SOFTWARE.
 ### ISC
 
 ```
-Copyright (c) 2015, $NAME
+Copyright (c) 2020, $NAME
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -54,7 +54,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ### BSD 2C
 
 ```
-Copyright (c) 2015, $NAME
+Copyright (c) 2020, $NAME
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -82,7 +82,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ### BSD 3C
 
 ```
-Copyright (c) 2015, $NAME
+Copyright (c) 2020, $NAME
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

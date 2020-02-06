@@ -1,6 +1,6 @@
 ---
 title: Sass
-category: CSS
+category: Dev
 layout: main/sheet
 tags: [Featured]
 updated: 2017-08-26

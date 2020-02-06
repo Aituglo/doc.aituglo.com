@@ -1,6 +1,6 @@
 ---
 title: Jest
-category: JavaScript libraries
+category: Dev
 layout: main/sheet
 updated: 2017-09-01
 weight: -3
