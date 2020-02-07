@@ -4,13 +4,9 @@ category: Linux
 layout: main/sheet
 ---
 
-List
---------------------
-{: .-one-column}
-    ls [options] [paths]
+## List
 
-{: .-three-column}
-
+ls [options] [paths]
 
 ### Format
 
@@ -69,6 +65,79 @@ List
 {:.shortcuts}
 
 <br>
+
+## Basics
+
+
+| `pwd` | Display current directory |
+| `uname [-a]` | Display system information |
+| `free [-h]` | Display free space |
+| `df [-h]` | Display memory information |
+| `ps [aux]` | Show processus |
+| `id` | Display current user |
+| `env` | Get all env variable |
+| `echo $PATH` | Display the path variable |
+| `export PATH=test` | Set a variable |
+
+<br>
+
+## Compress and Uncompress
+
+### Basics
+
+| Compress | Uncompress           |
+| -------  | -------------------- |
+| `bzip2`  | `bzcat` or `bunzip2` |
+| `gzip`   | `zcat` or `gunzip`   |
+| `zip`    | `unzip`              |
+
+### Tar
+
+| `tar` | -c for create, -v for details, -f to assemble into one file |
+| `tar -tf` | Display files on a tar file |
+| `tar -rvf` | Add a file in an existing tar |
+| `tar -xvf` | Extract (-x) |
+| `tar -zcvf file.tar.gz files/` | Gzip files |
+| `tar -zxvf ` | unGzip files |
+| `tar -jcvf file.tar.gz files/` | bzip2 files |
+| `tar -jxvf ` | unbzip2 files |
+
+<br>
+
+## Redirection
+
+| `>` | Redirect in a new file (eg: echo "Hello" > file) |
+| `>>` | Redirect at the end of a file | 
+| `> /dev/null` | Redirect into void |
+| `2>` | Redirect the error flow |
+| `2>>` | Redirect at the end of a file the error flow |
+| `2>&1` | Put error in the same file as normal flux ( eg: cat unknow.txt > file.log 2>&1) |
+| `<` | Read from file (eg: cat < notes.csv ) | 
+| `<<` | Read from the keyboard  ( eg: sort -n « FIN You can add a lot of line until tape FIN) |
+| `|` | Make a command after another | 
+
+
+## Watch System Activity
+
+| `w` | Watch all users connected |
+| `uptime` |
+| `who` | Watch users connected ( tty is for terminal and pts form graphical terminal ) |
+| `ps` | Process, -ef for all, -efH for tree, -u to select a user |
+| `top` | Dynamic list of process |
+| `kill pid` | Kill a process |
+| `killall process` | Kill all process of a command | 
+| `halt` | Shutdown |
+
+## Background Commands
+
+| `&` | Launch in background | 
+| `nohup command` | Launch in background in another terminal |
+| `Ctrl+Z` | Pause a command |
+| `bg` | Push the command you paused in background |
+| `jobs` | Display all background process | 
+| `fg` | Get the process in foreground, fg %2 to select the 2nd |
+| `crontab` | Manage cron, -l to list, -e to modify the crontab, -r to remove |
+
 
 ## Sudo
 
