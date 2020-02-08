@@ -205,6 +205,17 @@ sudo [options] <command>
 
 <br>
 
+## Extract, sort and filter data
+
+| `grep` | Find text in file, -i to not consider uppercase, -n number of line, -v to ignore a text, -r for recursive, -E to use Regex |
+| `grep -A20 text` | Display the next 20 lines after the text, -B for before |
+| `sort` | Sort all lines of a file with alphabet, -o output, -r reverse, -R random sort, -n numbers |
+| `wc` | Count lines or words, -l lines, -w words, -c bytes, -m character |
+| `uniq file newFile` | Detect and get unique lines or duplicate, -c counter, -d duplicate lines |
+| `tr` | Translate |
+
+<br>
+
 ## Search-and-replace in all files
 
     perl -p -i -e 's/hello/HELLO/g' **/*

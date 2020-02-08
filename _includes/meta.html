@@ -3,12 +3,7 @@
 <link href='{{ base }}/assets/favicon.png' rel='shortcut icon'>
 <meta content='{{ page.url }}' name='app:pageurl'>
 
-{% if meta_title %}
-  <title>{{ meta_title }}</title>
-  <meta content='{{ meta_title }}' property='og:title'>
-  <meta content='{{ meta_title }}' property='twitter:title'>
-  <meta content='{{ page.og_type | default: "article" }}' property='og:type'>
-{% endif %}
+<title>Aituglo cheatsheets</title>
 
 {% if meta_image %}
   <meta content='{{ meta_image | escape }}' property='og:image'>
@@ -40,7 +35,7 @@
 {% endif %}
 
 {% if site.title %}
-  <meta content='{{ site.title }}' property='og:site_name'>
+  <meta content='Aituglo cheatsheets' property='og:site_name'>
 {% endif %}
 
 {% if site.facebook.app_id %}
