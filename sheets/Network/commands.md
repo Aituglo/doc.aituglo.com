@@ -2,12 +2,12 @@
 title: Network Commands
 category: Network
 layout: main/sheet
-updated: 2020-22-11
+updated: 2020-06-06
 ---
 
 Network
 ---------------
-{: .-one-column}
+{: .-three-column}
 
 ### Commands
 
