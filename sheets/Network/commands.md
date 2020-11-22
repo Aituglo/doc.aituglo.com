@@ -7,7 +7,7 @@ updated: 2020-06-06
 
 Network
 ---------------
-{: .-three-column}
+{: .-two-column}
 
 ### Commands
 
