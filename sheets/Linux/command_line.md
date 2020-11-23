@@ -209,10 +209,12 @@ sudo [options] <command>
 
 | `grep` | Find text in file, -i to not consider uppercase, -n number of line, -v to ignore a text, -r for recursive, -E to use Regex |
 | `grep -A20 text` | Display the next 20 lines after the text, -B for before |
-| `sort` | Sort all lines of a file with alphabet, -o output, -r reverse, -R random sort, -n numbers |
+| `sort` | Sort all lines of a file with alphabet, -o output, -r reverse, -R random sort, -n numbers, -u for unique |
 | `wc` | Count lines or words, -l lines, -w words, -c bytes, -m character |
 | `uniq file newFile` | Detect and get unique lines or duplicate, -c counter, -d duplicate lines |
 | `tr` | Translate |
+| `awk '{print $1 " - " $2}'` | Separate 1 and 2 column aith a -. -f for column delimiter |
+| `xargs command` | Apply command to each arg, you can do it for each line with -d '\n' |
 
 <br>
 
